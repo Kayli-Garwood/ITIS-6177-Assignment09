@@ -3,8 +3,8 @@ exports.handler = async (event) => {
 	if(event.httpMethod === 'GET') {
           if(event && event.queryStringParameters && event.queryStringParameters.keyword){
              console.log("Received keyword: " + event.queryStringParameters.keyword);
-             let key = event.queryStringParameters.keyword
-             let responseBody = "Kayli Garwood says " + key
+             let kw = event.queryStringParameters.keyword
+             let responseBody = "Kayli Garwood says " + kw
              return {
                  statusCode :200,
                  body: JSON.stringify(responseBody)
